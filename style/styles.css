@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Poppins:wght@400;500;700&display=swap');
+
+:root {
+    --c1: #ececec;
+    --c2: #1e1f1f;
+    --c3: #7a7f84;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: var(--c1);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../src/number.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    box-shadow: 0px 3px 10px rgb(0, 0, 0);
+    width: 100%;
+    background-color: var(--c2);
+}
+
+header > nav {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    color: white;
+}
+
+header #nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header #nav a {
+    transition: color 0.4s linear;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 36px;
+    margin-left: 35px;
+    padding: 0px 10px;
+    display: inline-block;
+    position: relative;
+    color: var(--c3);
+}
+
+body header #nav a.active {
+    color: var(--c1);
+}
+
+header #nav a:hover {
+    color: var(--c1);
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container #draw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    height: 450px;
+}
+
+#tools-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 50px;
+    height: 100%;
+    margin: 10px;
+}
+
+#tools {
+    height: 31%;
+    background-color: var(--c1);
+    border-radius: 10px;
+}
+
+#tools-board #tools .button-separator {
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: var(--c2);
+    outline: none;
+    border: none;
+}
+
+#tools-board #tools button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 33%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--c1);
+}
+
+#tools-board #tools button#brush {
+    border-radius: 6px;
+}
+
+#tools-board #tools button#eraser {
+    border-radius: 0 0 6px 6px;
+}
+
+#tools-board #tools :is(#eraser, #pen) img:last-child {
+    display: none;
+}
+
+#tools-board #tools #brush img:first-child {
+    display: none;
+}
+
+#tools-board img {
+    width: 100%;
+    height: 100%;
+}
+
+#tools-clear {
+    height: 10%;
+    background-color: var(--c1);
+    border-radius: 10px;
+}
+
+#tools-clear button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--c1);
+    border-radius: 6px;
+    transition: 3s ease;
+}
+
+#canvas {
+    border: 4px solid var(--c1);
+    width: 450px;
+    height: 450px;
+    cursor: crosshair;
+}
+
+#prediction {
+    color: var(--c1);
+    visibility: hidden;
+}
+
+main > section {
+    background-color: var(--c2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.information-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+}
+
+main.information-container p a,
+footer a {
+    font-weight: 700;
+    padding: 2px;
+}
+
+.information {
+    background-color: #1e1f1f;
+    padding: 30px;
+    width: 80%;
+}
+
+.information p:is(:nth-child(2), :nth-child(4)) {
+    margin-bottom: 30px;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 960px) {
+    body.index {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .container {
+        flex-direction: column;
+    }
+
+    .container :is(section, #draw) {
+        margin: 20px;
+    }
+    
+    .container #draw {
+       margin-left: 90px;
+    }
+}
+
+@media (max-width: 700px) {
+    main.information-container .information h2 {
+        font-size: 20px;
+    }
+    
+    main.information-container .information p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container #draw {
+        height: 400px;
+    }
+    
+    .container #draw #canvas {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 540px) {
+    .container #draw {
+        margin: 0px;
+    }
+    
+    main.information-container .information h2 {
+        font-size: 18px;
+    }
+    
+    main.information-container .information p {
+        font-size: 12px;
+    }
+    
+    footer {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 475px) {
+    header > nav {
+        font-size: 15px;
+    }
+    
+    header #nav a {
+        font-size: 15px;
+    }
+    
+    #tools-board :is(#tools, #tools-clear) button {
+        padding: 5px;
+    }
+    
+    .container #draw {
+        height: 300px;
+    }
+    
+    .container #draw #canvas {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container section p br:is(:nth-child(1), :nth-child(2), :nth-child(3)) {
+        display: none;
+    }
+    
+    main.information-container .information h2 {
+        font-size: 15px;
+    }
+    
+    main.information-container .information p {
+        font-size: 9px;
+    }
+    
+    footer {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    header > nav {
+        font-size: 12px;
+    }
+    
+    header #nav a {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    
+    section {
+        font-size: 12px;
+    }
+    
+    .container #draw {
+        height: 275px;
+    }
+    
+    .container #draw #canvas {
+        width: 275px;
+        height: 275px;
+    }
+    
+    #tools-board {
+        width: 30px;
+        margin: 5px;
+    }
+}

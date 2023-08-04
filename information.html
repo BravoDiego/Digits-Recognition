@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digits Recognition - Information</title>
+    <link rel="icon" type="image/png" href="src/logo.png" />
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <header>
+        <nav>Digits Recognition</nav>
+        <div id="nav">
+            <a href="/index.html">AI</a>
+            <a href="/"  class="active">Information</a>
+        </div>
+    </header>
+
+    <main class="information-container">
+        <div class="information">
+            <h2>The AI model :</h2>
+            <p>I created an ia model from scratch in Python. With only libraries like <a href="https://numpy.org/">Numpy</a> or <a href="https://matplotlib.org/">maptplotlib</a>. In the absence of a learning library, all calculations have to be redone. I trained my model on this <a href="https://www.kaggle.com/competitions/digit-recognizer/data">MNIST dataset</a>, giving it 40,000 28-by-28-pixel photos of handwritten digits. On the train set, my model achieves an accuracy of around 85%. (With a possible risk of overfitting).</p>
+
+            <h2>AI integration :</h2>
+            <p>Using the javascript programming language, I created a canvas that can be drawn, then at the end of a plot javascript will resize the canvas in the background to a size of 28 by 28 pixels. Then, using the <a href="https://mathjs.org/">mathjs</a> library, I give the canvas image to my model, which then gives me the number with the highest probability.</p>
+
+            <h2>AI error field:</h2>
+            <p>Training ia is not perfect without the use of training libraries or just by overfitting, but also the fact that the canva is resized increases the potential for error.</p>
+        </div>        
+    </main>
+    <footer>This site was created and designed by <a href="https://github.com/BravoDiego">BRAVO Diego</a>.</footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digits Recognition - AI</title>
+    <link rel="icon" type="image/png" href="src/logo.png" />
+    <link rel="stylesheet" href="style/styles.css">
+    <script type="module" src="style/app.js"></script>
+
+</head>
+<body class="index">
+    <header>
+        <nav>Digits Recognition</nav>
+        <div id="nav">
+            <a href="/" class="active">AI</a>
+            <a href="/information.html">Information</a>
+        </div>
+    </header>
+    <main class="container">
+        <section>
+            <p>
+                Draw a digit (0-9) in the empty box. <br>
+                Uses the brush and the pen icon to draw a figure, <br>
+                the eraser icon to erase lines, <br>
+                and the dustbin icon to clean up the canvas.
+                <br><br>
+                The AI thinks it's a :
+            </p>
+            <h1 id="prediction">0</h1>
+        </section>
+        <div id="draw">
+            <div id="tools-board">
+                <div id="tools">
+                    <button id="brush"><img class="outline" src="src/brush.svg" alt="brush-icon"><img class="fill" src="src/brush-fill.svg" alt="brush-fill-icon"></button>
+                    <hr class="button-separator">
+                    <button id="pen"><img class="outline" src="src/pen.svg" alt="pen-icon"><img class="fill" src="src/pen-fill.svg" alt="pen-fill-icon"></button>
+                    <hr class="button-separator">
+                    <button id="eraser"><img class="outline" src="src/eraser.svg" alt="eraser-icon"><img class="fill" src="src/eraser-fill.svg" alt="earser-fill-icon"></button>
+                </div>
+                <div id="tools-clear">
+                    <button id="clear"><img src="src/delete.svg" alt="trash-icon"></button>
+                </div>
+            </div>
+            <div id="draw-board">
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
