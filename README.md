@@ -1,5 +1,5 @@
 <div>
-  <img src="src\banner.png" alt="Digits Recognation image banner" width="720"/>
+  <img src="src\banner.png" alt="Digits Recognation image banner" width="1080"/>
 </div>
 
 # Digits Recognition
